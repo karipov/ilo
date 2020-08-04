@@ -1,3 +1,10 @@
+# Custom
+src/config/*
+!src/config/config.json.example
+!src/config/replies.json
+
+src/logs/*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
