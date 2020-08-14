@@ -1,9 +1,7 @@
 # Custom
 *.DS_Store
 
-src/config/*
-!src/config/config.json.example
-!src/config/replies.json
+src/config/config.json
 
 logs/*
 

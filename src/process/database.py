@@ -4,6 +4,12 @@ import logging
 from peewee import Model, SqliteDatabase
 from peewee import CharField, IntegerField, BooleanField
 
+from config import CONFIG
+
+
+logger = logging.getLogger(__name__)
+db = SqliteDatabase(Path.cwd().joinpath(CONFIG['LOG']['DB']))
+
 
 class User(Model):
     user_id = IntegerField(primary_key=True)
@@ -34,9 +40,6 @@ def user_decorator(func):
     return func_wrapper
 
 
-
-logger = logging.getLogger(__name__)
-db = SqliteDatabase(Path.cwd().joinpath('src/logs/users.db'))
 db.connect()
 db.create_tables([User])
 logger.info("SQLite database connected, tables created")
