@@ -8,6 +8,7 @@ verify_ssl = true
 [packages]
 telethon = "*"
 colorlog = "*"
+peewee = "*"
 
 [requires]
 python_version = "3.8"
