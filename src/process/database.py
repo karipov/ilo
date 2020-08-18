@@ -15,6 +15,7 @@ class User(Model):
     user_id = IntegerField(primary_key=True)
     language = CharField(default='none')
     requests = IntegerField(default=0)
+    fsm_state = IntegerField(default=0)
     is_ban = BooleanField(default=False)
 
     class Meta:
@@ -35,7 +36,6 @@ def user_decorator(func):
 
         user.requests += 1
         user.save()
-        
 
     return func_wrapper
 
