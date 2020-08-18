@@ -1,5 +1,4 @@
 from pathlib import Path
-import json
 import logging
 
 from telethon import TelegramClient
@@ -9,7 +8,7 @@ from config import CONFIG
 from handlers import service
 
 
-# LOGGING SETUP
+# LOGGING SETUP
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
 formatter = colorlog.ColoredFormatter(
@@ -45,9 +44,8 @@ client = TelegramClient(
 ).start(bot_token=CONFIG['TELETHON']['TOKEN'])
 
 with client:
-    # TODO: import and add handlers
+    # TODO: import and add handlers
     client.add_event_handler(service.cmd_help)
     client.add_event_handler(service.cmd_start)
 
     client.run_until_disconnected()
-    
