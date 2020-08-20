@@ -1,10 +1,4 @@
 {
-    "GENERAL": {
-        "LANG": ["en", "uz", "ka"],
-        "LANG_NAME": ["English", "O'zbek", "Қарақалпақ"]
-    },
-
-
     "SERVICE": {
         "START": {
             "en": "Hello & welcome to tbe bot!"
@@ -12,6 +6,86 @@
 
         "HELP": {
             "en": "much help??"
+        },
+
+        "RESET": {
+            "en": "The bot has been reset. Enter /start to start again."
+        }
+    },
+
+    "FSM": {
+        "0": {
+            "edit": true,
+            "text": {
+                "en": "Welcome to the bot! Please choose your language:"
+            },
+            "markup": [["English", "O'zbek", "Қарақалпақ"]],
+            "payload": [["1:language->en", "1:language->uz", "1:language->ka"]]
+        },
+
+        "1": {
+            "edit": true,
+            "text": {
+                "en": "Please choose all that apply to you by clicking the buttons below:\n\n1. $HEADLINES:HARVEST:FARMER$\n2. $HEADLINES:HARVEST:CLUSTER$"
+            },
+            "markup": [["[ 1 ]", "[ 2 ]"]],
+            "payload": [["2:person_status->1", "2:person_status->2"]]
+        },
+
+        "2": {
+            "edit": false,
+            "text": {
+                "en": "Please choose all that apply to you by clicking the buttons below:\n\nA. $HEADLINES:RECRUITMENT:YOURSELF$\nB. $HEADLINES:RECRUITMENT:RECRUITERS$\nC. $HEADLINES:RECRUITMENT:VOLUNTARY$"
+            },
+
+            "markup": [["[ A ]", "[ B ]", "[ C ]"]],
+            "payload": [["3:recruit_status->A", "3:recruit_status->B", "3:recruit_status->C"]]
+        }
+    },
+
+    "MESSAGES": {
+        "1": "<i>$HEADLINES:GENERAL:CHILD_LAB$</i>\n- $CHILD_LAB:HARVEST:FARMER$\n- $CHILD_LAB:HARVEST:EXPLANATION$\n\n<i>$HEADLINES:GENERAL:ADULT_LAB$</i>\n- $ADULT_LAB:HARVEST:DOCUMENTS$\n- $ADULT_LAB:HARVEST:MOVEMENT$\n- $ADULT_LAB:HARVEST:RESPECT$\n- $ADULT_LAB:HARVEST:FEEDBACK$\n- $ADULT_LAB:HARVEST:TIME$\n- $ADULT_LAB:HARVEST:CONDITIONS$\n-> $ADULT_LAB:HARVEST:INSTRUCT_ONE$",
+        "2": "<i>$HEADLINES:GENERAL:CHILD_LAB</i>$\n- $CHILD_LAB:HARVEST:CLUSTER$\n- $CHILD_LAB:HARVEST:EXPLANATION$\n\n<i>$HEADLINES:GENERAL:ADULT_LAB$</i>\n- $ADULT_LAB:HARVEST:DOCUMENTS$\n- $ADULT_LAB:HARVEST:MOVEMENT$\n- $ADULT_LAB:HARVEST:RESPECT$\n- $ADULT_LAB:HARVEST:FEEDBACK$\n- $ADULT_LAB:HARVEST:TIME$\n- $ADULT_LAB:HARVEST:CONDITIONS$\n-> $ADULT_LAB:HARVEST:INSTRUCT_TWO$",
+
+        "A": "<i>$HEADLINES:GENERAL:CHILD_LAB$</i>\n- $CHILD_LAB:RECRUITMENT:YOURSELF$\n- $<b>CHILD_LAB:RECRUITMENT:NOMAJORITY</b>$\n- $CHILD_LAB:RECRUITMENT:DOCS$\n- $CHILD_LAB:RECRUITMENT:INSTRUCT$\n- $CHILD_LAB:RECRUITMENT:NOHELP$\n\n<i>$HEADLINES:GENERAL:ADULT_LAB$</i>\n- $ADULT_LAB:RECRUITMENT:INFO_ONE$\n- $ADULT_LAB:RECRUITMENT:CONDITIONS$\n- $ADULT_LAB:RECRUITMENT:AGREE$\n- $ADULT_LAB:RECRUITMENT:NOFEAR$\n- $ADULT_LAB:RECRUITMENT:SIGN$",
+        "B": "<i>$HEADLINES:GENERAL:CHILD_LAB$</i>\n- $CHILD_LAB:RECRUITMENT:RECRUITERS$\n- $<b>CHILD_LAB:RECRUITMENT:NOMAJORITY</b>$\n- $CHILD_LAB:RECRUITMENT:DOCS$\n- $CHILD_LAB:RECRUITMENT:INSTRUCT$\n- $CHILD_LAB:RECRUITMENT:NOHELP$\n\n<i>$HEADLINES:GENERAL:ADULT_LAB$</i>\n- $ADULT_LAB:RECRUITMENT:INFO_TWO$\n- $ADULT_LAB:RECRUITMENT:CONDITIONS$\n- $ADULT_LAB:RECRUITMENT:AGREE$\n- $ADULT_LAB:RECRUITMENT:NOFEAR$\n- $ADULT_LAB:RECRUITMENT:SIGN$",
+        "C": "<i>$HEADLINES:GENERAL:CHILD_LAB$</i>\n- $CHILD_LAB:RECRUITMENT:BRIGADE$\n- $<b>CHILD_LAB:RECRUITMENT:NOMAJORITY</b>$\n- $CHILD_LAB:RECRUITMENT:DOCS$\n- $CHILD_LAB:RECRUITMENT:INSTRUCT$\n- $CHILD_LAB:RECRUITMENT:NOHELP$\n\n<i>$HEADLINES:GENERAL:ADULT_LAB$</i>\n- $ADULT_LAB:RECRUITMENT:INFO_THREE$\n- $ADULT_LAB:RECRUITMENT:CONDITIONS$\n- $ADULT_LAB:RECRUITMENT:AGREE$\n- $ADULT_LAB:RECRUITMENT:NOFEAR$\n- $ADULT_LAB:RECRUITMENT:SIGN$"
+    },
+
+    "HEADLINES": {
+        "GENERAL": {
+            "CHILD_LAB": {
+                "en": "How can farmers and textile clusters <b>avoid child labour</b> during the cotton harvest?"
+            },
+            "ADULT_LAB": {
+                "en": "How can farmers and textile clusters <b>avoid forced labour</b> during the cotton harvest?"
+            },
+            "REC_PHASE": {
+                "en": "Measures during the recruitment phase"
+            },
+            "HAR_PHASE": {
+                "en": "Measures during the cotton harvest"
+            }
+        },
+        "RECRUITMENT": {
+            "YOURSELF": {
+                "en": "If you yourself or your staff find pickers"
+            },
+            "RECRUITERS": {
+                "en": "If you find pickers through recruiters/intermediaries"
+            },
+            "VOLUNTARY": {
+                "en": "If pickers themselves and/or their brigade leader come/comes to you"
+            }
+        },
+
+        "HARVEST": {
+            "FARMER": {
+                "en": "If you are a farmer"
+            },
+            "CLUSTER": {
+                "en": "if you are a textile cluster representative"
+            }
         }
     },
 
@@ -56,14 +130,24 @@
 
     "ADULT_LAB": {
         "RECRUITMENT": {
+            "INFO_ONE": {
+                "en": "Explain to potential pickers about the working conditions: wage, conditions of accommodation, food, water, transportation."
+            },
+            "INFO_TWO": {
+                "en": "Explain to potential pickers about the working conditions: wage, conditions of accommodation, food, water, transportation. Provide information to recruiters about the working conditions for pickers: wages, conditions of accommodation, food, water, transportation. Ask the recruiters to convey this information to the potential pickers."
+            },
+            "INFO_THREE": {
+                "en": "Explain to potential pickers and brigade leaders about the working conditions: wage, conditions of accommodation, food, water, transportation. Ask the brigade leader to convey this information to the potential pickers."
+            },
+
             "CONDITIONS": {
                 "en": "Check with recruited pickers if they are aware about the working conditions. if not, explain to them."
             },
             "AGREE": {
-                "en": "Find out if recruited pickers agree with conditions and want to pick cotton.\n\n <b>The voluntary agreement is valid only if pickers have full and truthful information about working conditions!</b>"
+                "en": "Find out if recruited pickers agree with conditions and want to pick cotton.<b>The voluntary agreement is valid only if pickers have full and truthful information about working conditions!</b>"
             },
             "NOFEAR": {
-                "en": "Find out if recruited pickers are not threatened and do not fear of refusing to pick cotton.\n\n Even if you do not threaten the pickers, they may fear to refuse, due to their or somebody else’s past negative experience or because they fear to refuse the recruiter.\n\n <b>If the person works involuntarily and under fear of penalty if he/she refuses, he/she is in forced labour</b>."
+                "en": "Find out if recruited pickers are not threatened and do not fear of refusing to pick cotton.Even if you do not threaten the pickers, they may fear to refuse, due to their or somebody else’s past negative experience or because they fear to refuse the recruiter.<b>If the person works involuntarily and under fear of penalty if he/she refuses, he/she is in forced labour</b>."
             },
             "SIGN": {
                 "en": "Sign <a href=\"https:\/\/www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf\">Labour agreements</b> with the cotton pickers."
