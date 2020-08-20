@@ -15,7 +15,6 @@
 
     "FSM": {
         "0": {
-            "edit": true,
             "text": {
                 "en": "Welcome to the bot! Please choose your language:"
             },
@@ -24,7 +23,6 @@
         },
 
         "1": {
-            "edit": true,
             "text": {
                 "en": "Please choose all that apply to you by clicking the buttons below:\n\n1. $HEADLINES:HARVEST:FARMER$\n2. $HEADLINES:HARVEST:CLUSTER$"
             },
@@ -33,23 +31,66 @@
         },
 
         "2": {
-            "edit": false,
+            "terminal": true,
             "text": {
                 "en": "Please choose all that apply to you by clicking the buttons below:\n\nA. $HEADLINES:RECRUITMENT:YOURSELF$\nB. $HEADLINES:RECRUITMENT:RECRUITERS$\nC. $HEADLINES:RECRUITMENT:VOLUNTARY$"
             },
 
             "markup": [["[ A ]", "[ B ]", "[ C ]"]],
-            "payload": [["3:recruit_status->A", "3:recruit_status->B", "3:recruit_status->C"]]
+            "payload": [["done:recruit_status->A", "done:recruit_status->B", "done:recruit_status->C"]]
         }
     },
 
     "MESSAGES": {
-        "1": "<i>$HEADLINES:GENERAL:CHILD_LAB$</i>\n- $CHILD_LAB:HARVEST:FARMER$\n- $CHILD_LAB:HARVEST:EXPLANATION$\n\n<i>$HEADLINES:GENERAL:ADULT_LAB$</i>\n- $ADULT_LAB:HARVEST:DOCUMENTS$\n- $ADULT_LAB:HARVEST:MOVEMENT$\n- $ADULT_LAB:HARVEST:RESPECT$\n- $ADULT_LAB:HARVEST:FEEDBACK$\n- $ADULT_LAB:HARVEST:TIME$\n- $ADULT_LAB:HARVEST:CONDITIONS$\n-> $ADULT_LAB:HARVEST:INSTRUCT_ONE$",
-        "2": "<i>$HEADLINES:GENERAL:CHILD_LAB</i>$\n- $CHILD_LAB:HARVEST:CLUSTER$\n- $CHILD_LAB:HARVEST:EXPLANATION$\n\n<i>$HEADLINES:GENERAL:ADULT_LAB$</i>\n- $ADULT_LAB:HARVEST:DOCUMENTS$\n- $ADULT_LAB:HARVEST:MOVEMENT$\n- $ADULT_LAB:HARVEST:RESPECT$\n- $ADULT_LAB:HARVEST:FEEDBACK$\n- $ADULT_LAB:HARVEST:TIME$\n- $ADULT_LAB:HARVEST:CONDITIONS$\n-> $ADULT_LAB:HARVEST:INSTRUCT_TWO$",
+        "RECRUITMENT": {
+            "1": {
+                "A": {
+                    "en": "https://telegra.ph/Measures-during-the-recruitment-phase-Directions-for-Fair-Recruitment-08-20"
+                },
+                "B": {
+                    "en": "https://telegra.ph/Measures-during-the-recruitment-phase-Directions-for-Fair-Recruitment-08-20-2"
+                },
+                "C": {
+                    "en": "https://telegra.ph/Measures-during-the-recruitment-phase-Directions-for-Fair-Recruitment-08-20-3"
+                }
+            },
+            "2": {
+                "A": {
+                    "en": "https://telegra.ph/Measures-during-the-recruitment-phase-Directions-for-Fair-Recruitment-08-20"
+                },
+                "B": {
+                    "en": "https://telegra.ph/Measures-during-the-recruitment-phase-Directions-for-Fair-Recruitment-08-20-2"
+                },
+                "C": {
+                    "en": "https://telegra.ph/Measures-during-the-recruitment-phase-Directions-for-Fair-Recruitment-08-20-3"
+                }
+            }
+        },
 
-        "A": "<i>$HEADLINES:GENERAL:CHILD_LAB$</i>\n- $CHILD_LAB:RECRUITMENT:YOURSELF$\n- $<b>CHILD_LAB:RECRUITMENT:NOMAJORITY</b>$\n- $CHILD_LAB:RECRUITMENT:DOCS$\n- $CHILD_LAB:RECRUITMENT:INSTRUCT$\n- $CHILD_LAB:RECRUITMENT:NOHELP$\n\n<i>$HEADLINES:GENERAL:ADULT_LAB$</i>\n- $ADULT_LAB:RECRUITMENT:INFO_ONE$\n- $ADULT_LAB:RECRUITMENT:CONDITIONS$\n- $ADULT_LAB:RECRUITMENT:AGREE$\n- $ADULT_LAB:RECRUITMENT:NOFEAR$\n- $ADULT_LAB:RECRUITMENT:SIGN$",
-        "B": "<i>$HEADLINES:GENERAL:CHILD_LAB$</i>\n- $CHILD_LAB:RECRUITMENT:RECRUITERS$\n- $<b>CHILD_LAB:RECRUITMENT:NOMAJORITY</b>$\n- $CHILD_LAB:RECRUITMENT:DOCS$\n- $CHILD_LAB:RECRUITMENT:INSTRUCT$\n- $CHILD_LAB:RECRUITMENT:NOHELP$\n\n<i>$HEADLINES:GENERAL:ADULT_LAB$</i>\n- $ADULT_LAB:RECRUITMENT:INFO_TWO$\n- $ADULT_LAB:RECRUITMENT:CONDITIONS$\n- $ADULT_LAB:RECRUITMENT:AGREE$\n- $ADULT_LAB:RECRUITMENT:NOFEAR$\n- $ADULT_LAB:RECRUITMENT:SIGN$",
-        "C": "<i>$HEADLINES:GENERAL:CHILD_LAB$</i>\n- $CHILD_LAB:RECRUITMENT:BRIGADE$\n- $<b>CHILD_LAB:RECRUITMENT:NOMAJORITY</b>$\n- $CHILD_LAB:RECRUITMENT:DOCS$\n- $CHILD_LAB:RECRUITMENT:INSTRUCT$\n- $CHILD_LAB:RECRUITMENT:NOHELP$\n\n<i>$HEADLINES:GENERAL:ADULT_LAB$</i>\n- $ADULT_LAB:RECRUITMENT:INFO_THREE$\n- $ADULT_LAB:RECRUITMENT:CONDITIONS$\n- $ADULT_LAB:RECRUITMENT:AGREE$\n- $ADULT_LAB:RECRUITMENT:NOFEAR$\n- $ADULT_LAB:RECRUITMENT:SIGN$"
+        "HARVEST": {
+            "1": {
+                "A": {
+                    "en": "https://telegra.ph/Measures-during-the-the-cotton-harvest-Directions-for-Fair-Recruitment-08-20"
+                },
+                "B": {
+                    "en": "https://telegra.ph/Measures-during-the-the-cotton-harvest-Directions-for-Fair-Recruitment-08-20"
+                },
+                "C": {
+                    "en": "https://telegra.ph/Measures-during-the-the-cotton-harvest-Directions-for-Fair-Recruitment-08-20"
+                }
+            },
+            "2": {
+                "A": {
+                    "en": "https://telegra.ph/Measures-during-the-the-cotton-harvest-Directions-for-Fair-Recruitment-08-20-2"
+                },
+                "B": {
+                    "en": "https://telegra.ph/Measures-during-the-the-cotton-harvest-Directions-for-Fair-Recruitment-08-20-2"
+                },
+                "C": {
+                    "en": "https://telegra.ph/Measures-during-the-the-cotton-harvest-Directions-for-Fair-Recruitment-08-20-2"
+                }
+            }
+        }
     },
 
     "HEADLINES": {
@@ -85,101 +126,6 @@
             },
             "CLUSTER": {
                 "en": "if you are a textile cluster representative"
-            }
-        }
-    },
-
-    "CHILD_LAB": {
-        "RECRUITMENT": {
-            "DOCS": {
-                "en": "Have on file copies of ID documents of all pickers"
-            },
-            "INSTRUCT": {
-                "en": "Instruct the farmers and/or brigade leaders on prohibition of using persons below 18 years in cotton picking."
-            },
-            "NOHELP": {
-                "en": "Tell permanent members of the farm and other pickers that they are not allowed to bring with them persons below 18 years for help."
-            },
-            "NOMAJORITY": {
-                "en": "Persons below 18 years are not allowed to pick cotton even if they volunteer!"
-            },
-            "YOURSELF": {
-                "en": "Check the age of potential pickers. Ask their ID documents."
-            },
-            "RECRUITERS": {
-                "en": "Ask the recruiter to check the age of potential pickers and check their ID documents. Check yourself."
-            },
-            "BRIGADE": {
-                "en": "Check the age of potential pickers. Ask to see ID documents."
-            }
-        },
-
-        "HARVEST": {
-            "EXPLANATION": {
-                "en": "Instruct the brigade leader that persons below 18 years are not allowed to pick cotton. It is illegal. If small children come to the fields with the parents, brigade leaders should explain to parents that cotton fields are not safe for children due to high temperature, dust, use of pesticides, machines, for other reasons."
-            },
-            "FARMER": {
-                "en": "Check daily that persons below 18 years are not picking cotton on your field/fields and/or ask the brigade leader to do it. Check ID documents for new comers and have copies on file."
-            },
-            "CLUSTER": {
-                "en": "Ask the farmer and/or brigade leader to check daily that persons below 18 years are not picking cotton on your field/fields, check ID documents for new comers and have copies on file."
-            }
-        }
-    },
-
-
-    "ADULT_LAB": {
-        "RECRUITMENT": {
-            "INFO_ONE": {
-                "en": "Explain to potential pickers about the working conditions: wage, conditions of accommodation, food, water, transportation."
-            },
-            "INFO_TWO": {
-                "en": "Explain to potential pickers about the working conditions: wage, conditions of accommodation, food, water, transportation. Provide information to recruiters about the working conditions for pickers: wages, conditions of accommodation, food, water, transportation. Ask the recruiters to convey this information to the potential pickers."
-            },
-            "INFO_THREE": {
-                "en": "Explain to potential pickers and brigade leaders about the working conditions: wage, conditions of accommodation, food, water, transportation. Ask the brigade leader to convey this information to the potential pickers."
-            },
-
-            "CONDITIONS": {
-                "en": "Check with recruited pickers if they are aware about the working conditions. if not, explain to them."
-            },
-            "AGREE": {
-                "en": "Find out if recruited pickers agree with conditions and want to pick cotton.<b>The voluntary agreement is valid only if pickers have full and truthful information about working conditions!</b>"
-            },
-            "NOFEAR": {
-                "en": "Find out if recruited pickers are not threatened and do not fear of refusing to pick cotton.Even if you do not threaten the pickers, they may fear to refuse, due to their or somebody else’s past negative experience or because they fear to refuse the recruiter.<b>If the person works involuntarily and under fear of penalty if he/she refuses, he/she is in forced labour</b>."
-            },
-            "SIGN": {
-                "en": "Sign <a href=\"https:\/\/www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf\">Labour agreements</b> with the cotton pickers."
-            }
-        },
-        
-        "HARVEST": {
-            "CONDITIONS": {
-                "en": "Ensure decent living and working conditions for the pickers."
-            },
-             "TIME": {
-                "en": "Respect the working and leisure time of pickers. They are entitled to a eight hour working day for a five day working week and seven hour working day for a six day working week with a lunch break. <b>Daily working hours should not exceed 12 hours</b>."
-            },
-
-            "DOCUMENTS": {
-                "en": "Take the ID documents of pickers only to make copies or if they ask you to keep the originals of them. You do not have the right to withhold ID documents or other belongings of the workers."
-            },
-            "MOVEMENT": {
-                "en": "Do not restrict the movement of pickers. They have the right to come to and leave the cotton field freely."
-            },
-            "RESPECT": {
-                "en": "Treat workers with respect and dignity. Physical, psychological and verbal violence, are not acceptable."
-            },
-            "FEEDBACK": {
-                "en": "Inform the pickers about the FBM of the MELR."
-            },
-           
-            "INSTRUCT_ONE": {
-                "en": "Instruct the brigade leader."
-            },
-            "INSTRUCT_TWO": {
-                "en": "Instruct the farmer and/or the brigade leader."
             }
         }
     }
