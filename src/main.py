@@ -47,5 +47,6 @@ with client:
     # TODO: import and add handlers
     client.add_event_handler(service.cmd_help)
     client.add_event_handler(general.fsm_handler)
+    client.add_event_handler(general.finished_setup_handler)
 
     client.run_until_disconnected()

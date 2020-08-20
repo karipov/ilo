@@ -22,13 +22,18 @@ async def fsm_handler(
 
     current_state_data = REPLIES['FSM'][user.fsm_state]
 
-    if hasattr(event, 'query') and current_state_data['edit']:
+    # if it's a callback
+    if hasattr(event, 'query'):
         method = event.edit  # edit the original message
         future_fsm, db_data = event.data.decode('utf-8').split(':')
+        user.fsm_state = future_fsm
         user.set_from_string(db_data)
     else:
         method = event.respond  # respond to the original message
         future_fsm = user.fsm_state
+
+    if current_state_data.get('terminal'):
+        return
 
     future_state_data = REPLIES['FSM'][future_fsm]
 
@@ -48,3 +53,28 @@ async def fsm_handler(
     )
 
     user.requests += 1
+
+
+@events.register(events.CallbackQuery())
+@events.register(events.NewMessage())
+@user_decorator(increment=False)
+async def finished_setup_handler(
+    event: Union[events.CallbackQuery.Event, events.NewMessage.Event],
+    user: User
+):
+    if not user.fsm_state == 'done':
+        return
+
+    # if it's a callback
+    if hasattr(event, 'query'):
+        method = event.edit
+    else:
+        method = event.respond
+
+    time = utility.check_time()
+
+    await method(
+        REPLIES['MESSAGES'][time][user.person_status]
+        [user.recruit_status][user.language],
+        parse_mode='HTML'
+    )
