@@ -5,7 +5,7 @@ from telethon import TelegramClient
 import colorlog
 
 from config import CONFIG
-from handlers import service
+from handlers import service, general
 
 
 # LOGGING SETUP
@@ -46,6 +46,6 @@ client = TelegramClient(
 with client:
     # TODO: import and add handlers
     client.add_event_handler(service.cmd_help)
-    client.add_event_handler(service.cmd_start)
+    client.add_event_handler(general.fsm_handler)
 
     client.run_until_disconnected()
