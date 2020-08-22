@@ -29,6 +29,9 @@ class User(Model):
         database = db
 
     def set_from_string(self, string: str, save: bool = False):
+        if '->' not in string:
+            return
+
         attr, value = string.split('->')
 
         if hasattr(self, attr):

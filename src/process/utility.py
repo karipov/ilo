@@ -19,7 +19,8 @@ def check_fsm(user):
 
 def keyboard_gen(
     labels: List[List[str]],
-    data: List[List[str]]
+    data: List[List[str]],
+    kind: Button = Button.inline
 ) -> List[List[Button]]:
     """
     Generates telethon-compatible keyboards
@@ -29,14 +30,14 @@ def keyboard_gen(
 
     for i in range(len(labels)):
         for j in range(len(labels[i])):
-            button_matrix[i][j] = Button.inline(
+            button_matrix[i][j] = kind(
                 labels[i][j], data[i][j]
             )
 
     return button_matrix
 
 
-def check_time() -> str:
+def check_time() -> str:  # TODO: build into config file
     """ Checks if it's recruitment or harvest time """
     current = datetime.datetime.now()
 
@@ -70,3 +71,7 @@ def expand_text(unexpanded: str, expand_keys: dict, language: str) -> str:
         expanded = expanded.replace(to_replace, with_replace)
 
     return expanded
+
+
+def share_link_gen(link: str) -> str:
+    return f"https://t.me/share/url?url={link}"
