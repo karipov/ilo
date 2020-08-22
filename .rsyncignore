@@ -1,8 +1,7 @@
 # Custom
 *.DS_Store
-scripts/*
+vscode/*
 logs/*
-src/config/config.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
