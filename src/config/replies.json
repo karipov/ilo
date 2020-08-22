@@ -1,15 +1,7 @@
 {
     "SERVICE": {
-        "START": {
-            "en": "Hello & welcome to tbe bot!"
-        },
-
         "HELP": {
             "en": "much help??"
-        },
-
-        "RESET": {
-            "en": "The bot has been reset. Enter /start to start again."
         }
     },
 
@@ -31,14 +23,15 @@
         },
 
         "2": {
-            "terminal": true,
             "text": {
                 "en": "Please choose all that apply to you by clicking the buttons below:\n\nA. $HEADLINES:RECRUITMENT:YOURSELF$\nB. $HEADLINES:RECRUITMENT:RECRUITERS$\nC. $HEADLINES:RECRUITMENT:VOLUNTARY$"
             },
 
             "markup": [["[ A ]", "[ B ]", "[ C ]"]],
-            "payload": [["done:recruit_status->A", "done:recruit_status->B", "done:recruit_status->C"]]
-        }
+            "payload": [["3:recruit_status->A", "3:recruit_status->B", "3:recruit_status->C"]]
+        },
+
+        "3": ""
     },
 
     "MESSAGES": {
@@ -89,6 +82,15 @@
                 "C": {
                     "en": "https://telegra.ph/Measures-during-the-the-cotton-harvest-Directions-for-Fair-Recruitment-08-20-2"
                 }
+            }
+        },
+
+        "CUSTOM": {
+            "BACK": {
+                "en": "« Back"
+            },
+            "SHARE": {
+                "en": "Share"
             }
         }
     },
