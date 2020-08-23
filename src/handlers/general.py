@@ -41,6 +41,7 @@ async def master_handler(
         },
         "3": {
             "3": finished_setup_handler,
+            "0": fsm_handler,
             "1": fsm_handler
         }
     }
@@ -100,7 +101,7 @@ async def finished_setup_handler(
     custom_keyboard = [[
         Button.inline(
             REPLIES['MESSAGES']['CUSTOM']['BACK'][user.language],
-            '1:dummy_data'
+            '0:dummy_data'
         ),
         Button.url(
             REPLIES['MESSAGES']['CUSTOM']['SHARE'][user.language],

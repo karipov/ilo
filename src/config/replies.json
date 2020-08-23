@@ -5,8 +5,8 @@
                 "en": "Please choose your language:",
                 "uz": "Уз тилингизни танланг:"
             },
-            "markup": [["English", "O'zbek", "Қарақалпақ"]],
-            "payload": [["1:language->en", "1:language->uz", "1:language->ka"]]
+            "markup": [["English", "O'zbek"]],
+            "payload": [["1:language->en", "1:language->uz"]]
         },
 
         "1": {
@@ -100,7 +100,8 @@
                 "uz": "« Оркага"
             },
             "SHARE": {
-                "en": "Share"
+                "en": "Share",
+                "uz": "Бошкалар билан булишинг"
             }
         }
     },
