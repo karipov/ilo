@@ -17,15 +17,35 @@ async def master_handler(
     event: Union[events.CallbackQuery.Event, events.NewMessage.Event],
     user: User
 ):
-    logger.warn(f"current state: {user.fsm_state}")
-
-    if user.fsm_state in ['0', '1']:
-        await fsm_handler(event, user)
-    elif user.fsm_state in ['2', '3']:
-        await finished_setup_handler(event, user)
+    if hasattr(event, 'query'):
+        future_fsm, _ = event.data.decode('utf-8').split(':')
     else:
-        logger.error('User {user.user_id} is out of predefined FSM states')
-        return
+        future_fsm = user.fsm_state
+
+    current_fsm = user.fsm_state
+
+    logger.warn(f'current: {current_fsm}, future: {future_fsm}')
+
+    tree = {
+        "0": {
+            "0": fsm_handler,
+            "1": fsm_handler
+        },
+        "1": {
+            "1": fsm_handler,
+            "2": fsm_handler
+        },
+        "2": {
+            "2": fsm_handler,
+            "3": finished_setup_handler
+        },
+        "3": {
+            "3": finished_setup_handler,
+            "1": fsm_handler
+        }
+    }
+
+    await tree[current_fsm][future_fsm](event, user)
 
 
 async def fsm_handler(
@@ -36,7 +56,6 @@ async def fsm_handler(
     if hasattr(event, 'query'):
         method = event.edit  # edit the original message
         future_fsm, db_data = event.data.decode('utf-8').split(':')
-        logging.warn(f'fsm_handler future fsm {future_fsm}')
         user.fsm_state = future_fsm
         user.set_from_string(db_data)
     else:
@@ -73,12 +92,6 @@ async def finished_setup_handler(
         method = event.edit
         future_fsm, db_data = event.data.decode('utf-8').split(':')
         user.fsm_state = future_fsm
-
-        # if we're returning back, offload to fsm_handler
-        if user.fsm_state == '1':
-            await fsm_handler(event, user)
-            return
-
         user.set_from_string(db_data)
     else:
         method = event.respond
