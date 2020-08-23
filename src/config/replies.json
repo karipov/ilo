@@ -1,14 +1,9 @@
 {
-    "SERVICE": {
-        "HELP": {
-            "en": "much help??"
-        }
-    },
-
     "FSM": {
         "0": {
             "text": {
-                "en": "Welcome to the bot! Please choose your language:"
+                "en": "Please choose your language:",
+                "uz": "Уз тилингизни танланг:"
             },
             "markup": [["English", "O'zbek", "Қарақалпақ"]],
             "payload": [["1:language->en", "1:language->uz", "1:language->ka"]]
@@ -16,7 +11,8 @@
 
         "1": {
             "text": {
-                "en": "Please choose all that apply to you by clicking the buttons below:\n\n1. $HEADLINES:HARVEST:FARMER$\n2. $HEADLINES:HARVEST:CLUSTER$"
+                "en": "Please choose one of the following:\n\n1. $HEADLINES:HARVEST:FARMER$\n2. $HEADLINES:HARVEST:CLUSTER$",
+                "uz": "Куйидагилардан бирини танланг:\n\n1. $HEADLINES:HARVEST:FARMER$\n2. $HEADLINES:HARVEST:CLUSTER$"
             },
             "markup": [["[ 1 ]", "[ 2 ]"]],
             "payload": [["2:person_status->1", "2:person_status->2"]]
@@ -24,7 +20,8 @@
 
         "2": {
             "text": {
-                "en": "Please choose all that apply to you by clicking the buttons below:\n\nA. $HEADLINES:RECRUITMENT:YOURSELF$\nB. $HEADLINES:RECRUITMENT:RECRUITERS$\nC. $HEADLINES:RECRUITMENT:VOLUNTARY$"
+                "en": "Please choose one of the following:\n\nA. $HEADLINES:RECRUITMENT:YOURSELF$\nB. $HEADLINES:RECRUITMENT:RECRUITERS$\nC. $HEADLINES:RECRUITMENT:VOLUNTARY$",
+                "uz": "Куйидагилардан бирини танланг:\n\nA. $HEADLINES:RECRUITMENT:YOURSELF$\nB. $HEADLINES:RECRUITMENT:RECRUITERS$\nC. $HEADLINES:RECRUITMENT:VOLUNTARY$"
             },
 
             "markup": [["[ A ]", "[ B ]", "[ C ]"]],
@@ -38,24 +35,30 @@
         "RECRUITMENT": {
             "1": {
                 "A": {
-                    "en": "https://telegra.ph/Measures-during-the-recruitment-phase-Directions-for-Fair-Recruitment-08-20"
+                    "en": "https://telegra.ph/Measures-during-the-recruitment-phase-Directions-for-Fair-Recruitment-08-20",
+                    "uz": "https://telegra.ph/Ishga-yollash-bos%D2%9Bichidagi-choralar-Adolatli-ishga-yollash-uchun-kursatmalar-08-23-3"
                 },
                 "B": {
-                    "en": "https://telegra.ph/Measures-during-the-recruitment-phase-Directions-for-Fair-Recruitment-08-20-2"
+                    "en": "https://telegra.ph/Measures-during-the-recruitment-phase-Directions-for-Fair-Recruitment-08-20-2",
+                    "uz": "https://telegra.ph/Ishga-yollash-bos%D2%9Bichidagi-choralar-Adolatli-ishga-yollash-uchun-kursatmalar-08-23-2"
                 },
                 "C": {
-                    "en": "https://telegra.ph/Measures-during-the-recruitment-phase-Directions-for-Fair-Recruitment-08-20-3"
+                    "en": "https://telegra.ph/Measures-during-the-recruitment-phase-Directions-for-Fair-Recruitment-08-20-3",
+                    "uz": "https://telegra.ph/Ishga-yollash-bos%D2%9Bichidagi-choralar-Adolatli-ishga-yollash-uchun-kursatmalar-08-23"
                 }
             },
             "2": {
                 "A": {
-                    "en": "https://telegra.ph/Measures-during-the-recruitment-phase-Directions-for-Fair-Recruitment-08-20"
+                    "en": "https://telegra.ph/Measures-during-the-recruitment-phase-Directions-for-Fair-Recruitment-08-20",
+                    "uz": "https://telegra.ph/Ishga-yollash-bos%D2%9Bichidagi-choralar-Adolatli-ishga-yollash-uchun-kursatmalar-08-23-3"
                 },
                 "B": {
-                    "en": "https://telegra.ph/Measures-during-the-recruitment-phase-Directions-for-Fair-Recruitment-08-20-2"
+                    "en": "https://telegra.ph/Measures-during-the-recruitment-phase-Directions-for-Fair-Recruitment-08-20-2",
+                    "uz": "https://telegra.ph/Ishga-yollash-bos%D2%9Bichidagi-choralar-Adolatli-ishga-yollash-uchun-kursatmalar-08-23-2"
                 },
                 "C": {
-                    "en": "https://telegra.ph/Measures-during-the-recruitment-phase-Directions-for-Fair-Recruitment-08-20-3"
+                    "en": "https://telegra.ph/Measures-during-the-recruitment-phase-Directions-for-Fair-Recruitment-08-20-3",
+                    "uz": "https://telegra.ph/Ishga-yollash-bos%D2%9Bichidagi-choralar-Adolatli-ishga-yollash-uchun-kursatmalar-08-23"
                 }
             }
         },
@@ -63,31 +66,38 @@
         "HARVEST": {
             "1": {
                 "A": {
-                    "en": "https://telegra.ph/Measures-during-the-the-cotton-harvest-Directions-for-Fair-Recruitment-08-20"
+                    "en": "https://telegra.ph/Measures-during-the-the-cotton-harvest-Directions-for-Fair-Recruitment-08-20",
+                    "uz": "https://telegra.ph/Pahta-ji%D2%93im-terimi-davridagi-chora-tadbirlar-Adolatli-ishga-yollash-uchun-kursatmalar-08-23"
                 },
                 "B": {
-                    "en": "https://telegra.ph/Measures-during-the-the-cotton-harvest-Directions-for-Fair-Recruitment-08-20"
+                    "en": "https://telegra.ph/Measures-during-the-the-cotton-harvest-Directions-for-Fair-Recruitment-08-20",
+                    "uz": "https://telegra.ph/Pahta-ji%D2%93im-terimi-davridagi-chora-tadbirlar-Adolatli-ishga-yollash-uchun-kursatmalar-08-23"
                 },
                 "C": {
-                    "en": "https://telegra.ph/Measures-during-the-the-cotton-harvest-Directions-for-Fair-Recruitment-08-20"
+                    "en": "https://telegra.ph/Measures-during-the-the-cotton-harvest-Directions-for-Fair-Recruitment-08-20",
+                    "uz": "https://telegra.ph/Pahta-ji%D2%93im-terimi-davridagi-chora-tadbirlar-Adolatli-ishga-yollash-uchun-kursatmalar-08-23"
                 }
             },
             "2": {
                 "A": {
-                    "en": "https://telegra.ph/Measures-during-the-the-cotton-harvest-Directions-for-Fair-Recruitment-08-20-2"
+                    "en": "https://telegra.ph/Measures-during-the-the-cotton-harvest-Directions-for-Fair-Recruitment-08-20-2",
+                    "uz": "https://telegra.ph/Pahta-ji%D2%93im-terimi-davridagi-chora-tadbirlar-Adolatli-ishga-yollash-uchun-kursatmalar-08-23-2"
                 },
                 "B": {
-                    "en": "https://telegra.ph/Measures-during-the-the-cotton-harvest-Directions-for-Fair-Recruitment-08-20-2"
+                    "en": "https://telegra.ph/Measures-during-the-the-cotton-harvest-Directions-for-Fair-Recruitment-08-20-2",
+                    "uz": "https://telegra.ph/Pahta-ji%D2%93im-terimi-davridagi-chora-tadbirlar-Adolatli-ishga-yollash-uchun-kursatmalar-08-23-2"
                 },
                 "C": {
-                    "en": "https://telegra.ph/Measures-during-the-the-cotton-harvest-Directions-for-Fair-Recruitment-08-20-2"
+                    "en": "https://telegra.ph/Measures-during-the-the-cotton-harvest-Directions-for-Fair-Recruitment-08-20-2",
+                    "uz": "https://telegra.ph/Pahta-ji%D2%93im-terimi-davridagi-chora-tadbirlar-Adolatli-ishga-yollash-uchun-kursatmalar-08-23-2"
                 }
             }
         },
 
         "CUSTOM": {
             "BACK": {
-                "en": "« Back"
+                "en": "« Back",
+                "uz": "« Оркага"
             },
             "SHARE": {
                 "en": "Share"
@@ -96,38 +106,29 @@
     },
 
     "HEADLINES": {
-        "GENERAL": {
-            "CHILD_LAB": {
-                "en": "How can farmers and textile clusters <b>avoid child labour</b> during the cotton harvest?"
-            },
-            "ADULT_LAB": {
-                "en": "How can farmers and textile clusters <b>avoid forced labour</b> during the cotton harvest?"
-            },
-            "REC_PHASE": {
-                "en": "Measures during the recruitment phase"
-            },
-            "HAR_PHASE": {
-                "en": "Measures during the cotton harvest"
-            }
-        },
         "RECRUITMENT": {
             "YOURSELF": {
-                "en": "If you yourself or your staff find pickers"
+                "en": "If you yourself or your staff find pickers",
+                "uz": "Ўзингиз ёки ходимларингиз пахта теримчиларини топсангиз"
             },
             "RECRUITERS": {
-                "en": "If you find pickers through recruiters/intermediaries"
+                "en": "If you find pickers through recruiters/intermediaries",
+                "uz": "Сиз ёлловчи агентликлар / воситачилар орқали теримчиларни топган ҳолларда"
             },
             "VOLUNTARY": {
-                "en": "If pickers themselves and/or their brigade leader come/comes to you"
+                "en": "If pickers themselves and/or their brigade leader come/comes to you",
+                "uz": "Теримчиларнинг ўзлари ва / ёки уларнинг бригадири сизга мурожаат қилган ҳолларда"
             }
         },
 
         "HARVEST": {
             "FARMER": {
-                "en": "If you are a farmer"
+                "en": "If you are a farmer",
+                "uz": "Агарда сиз фермер булсангиз"
             },
             "CLUSTER": {
-                "en": "if you are a textile cluster representative"
+                "en": "If you are a textile cluster representative",
+                "uz": "Агарда сиз тукимачилик кластер вакили булсангиз"
             }
         }
     }
