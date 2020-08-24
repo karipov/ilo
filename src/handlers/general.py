@@ -24,8 +24,6 @@ async def master_handler(
 
     current_fsm = user.fsm_state
 
-    logger.warn(f'current: {current_fsm}, future: {future_fsm}')
-
     tree = {
         "0": {
             "0": fsm_handler,
@@ -33,16 +31,11 @@ async def master_handler(
         },
         "1": {
             "1": fsm_handler,
-            "2": fsm_handler
+            "2": finished_setup_handler
         },
         "2": {
-            "2": fsm_handler,
-            "3": finished_setup_handler
-        },
-        "3": {
-            "3": finished_setup_handler,
-            "0": fsm_handler,
-            "1": fsm_handler
+            "2": finished_setup_handler,
+            "0": fsm_handler
         }
     }
 
@@ -97,24 +90,19 @@ async def finished_setup_handler(
     else:
         method = event.respond
 
-    time = utility.check_time()
     custom_keyboard = [[
         Button.inline(
-            REPLIES['MESSAGES']['CUSTOM']['BACK'][user.language],
+            REPLIES['DISPLAY']['CUSTOM']['BACK'][user.language],
             '0:dummy_data'
-        ),
-        Button.url(
-            REPLIES['MESSAGES']['CUSTOM']['SHARE'][user.language],
-            utility.share_link_gen(
-                REPLIES['MESSAGES'][time][user.person_status]
-                [user.recruit_status][user.language]
-            )
         )
     ]]
 
     await method(
-        REPLIES['MESSAGES'][time][user.person_status]
-        [user.recruit_status][user.language],
+        utility.expand_text(
+            REPLIES['DISPLAY']['MESSAGES'][user.recruit_status],
+            REPLIES,
+            user.language
+        ),
         buttons=custom_keyboard,
         parse_mode='HTML'
     )

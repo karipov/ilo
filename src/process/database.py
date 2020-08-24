@@ -16,8 +16,6 @@ db = SqliteDatabase(Path.cwd().joinpath(CONFIG['LOG']['DB']))
 class User(Model):
     user_id = IntegerField(primary_key=True)
     language = CharField(default='none')
-    # farmer / cluster representative status
-    person_status = CharField(default='none')
     # find yourself / recruiters recruit / voluntary workers status
     recruit_status = CharField(default='none')
 
