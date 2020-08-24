@@ -2,7 +2,6 @@
 Utility functions
 """
 import re
-import datetime
 from typing import List, Union
 
 from telethon import Button
@@ -37,22 +36,12 @@ def keyboard_gen(
     return button_matrix
 
 
-def check_time() -> str:  # TODO: build into config file
-    """ Checks if it's recruitment or harvest time """
-    current = datetime.datetime.now()
-
-    # date after september 15
-    if current.month > 9 or (current.month == 9 and current.day >= 15):
-        return "HARVEST"
-
-    return "RECRUITMENT"
-
-
 def expand_text(unexpanded: str, expand_keys: dict, language: str) -> str:
     """ Text expansion """
 
     def traverse_dict(keys: List, tree: dict) -> Union[dict, str]:
         """ Recursive dictionary traversal given a list of nodes (keys) """
+
         if len(keys) == 0:
             return tree
         else:
