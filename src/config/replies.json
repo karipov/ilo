@@ -5,28 +5,61 @@
                 "en": "Please choose your language:",
                 "uz": "Уз тилингизни танланг:"
             },
-            "markup": [["English", "O'zbek"]],
-            "payload": [["1:language->en", "1:language->uz"]]
+            "markup": [["English"]],
+            "payload": [["1:language->en"]]
         },
 
         "1": {
             "text": {
-                "en": "Please choose one of the following:\n\nA. $DIRECTIONS:YOURSELF:MAIN$\nB. $DIRECTIONS:RECRUITERS:MAIN$\nC. $DIRECTIONS:VOLUNTARY:MAIN$",
-                "uz": "Куйидагилардан бирини танланг:\n\nA. $DIRECTIONS:YOURSELF:MAIN$\nB. $DIRECTIONS:RECRUITERS:MAIN$\nC. $DIRECTIONS:VOLUNTARY:MAIN$"
+                "en": "Please choose one of the following:\n\nA. $DIRECTIONS:YOURSELF$\nB. $DIRECTIONS:RECRUITERS$\nC. $DIRECTIONS:VOLUNTARY$",
+                "uz": "Куйидагилардан бирини танланг:\n\nA. $DIRECTIONS:YOURSELF$\nB. $DIRECTIONS:RECRUITERS$\nC. $DIRECTIONS:VOLUNTARY$"
             },
 
-            "markup": [["[ A ]", "[ B ]", "[ C ]"]],
-            "payload": [["2:recruit_status->A", "2:recruit_status->B", "2:recruit_status->C"]]
+            "markup": {
+                "en": [["« Back", "[ A ]", "[ B ]", "[ C ]"]]
+            },
+            "payload": [["0:back", "2:recruit_status->A", "2:recruit_status->B", "2:recruit_status->C"]]
         },
 
-        "2": ""
+        "2": {
+            "text": {
+                "en": "Please choose one of the following:\n\n1. $DIRECTIONS:CHILD$\n2. $DIRECTIONS:ADULT$"
+            },
+            "markup": {
+                "en": [["« Back", "[ 1 ]", "[ 2 ]"]]
+            },
+            "payload": [["1:back", "3:labor_status->1", "3:labor_status->2"]]
+        },
+
+        "3": ""
     },
 
     "DISPLAY": {
         "MESSAGES": {
-            "A": "$DIRECTIONS:COMMON:CHECKAGE$\n$DIRECTIONS:COMMON:COPIES$\n$DIRECTIONS:COMMON:U18PROHIBITION$\n$DIRECTIONS:COMMON:U18HELP$\n$DIRECTIONS:YOURSELF:CONDITIONS$\n$DIRECTIONS:COMMON:RECRUITEDAWARE$\n$DIRECTIONS:COMMON:RECRUITAGREE$\n$DIRECTIONS:YOURSELF:RECRUITERFEAR$\n$DIRECTIONS:COMMON:SIGN$\n$DIRECTIONS:YOURSELF:IDDOCS$\n$DIRECTIONS:COMMON:MOVEMENT$\n$DIRECTIONS:COMMON:CONDITIONS$\n$DIRECTIONS:COMMON:LEISURE$\n$DIRECTIONS:COMMON:RESPECT$\n$DIRECTIONS:COMMON:HOTLINE$\n",
-            "B": "$DIRECTIONS:RECRUITERS:CHECKAGE$\n$DIRECTIONS:COMMON:COPIES$\n$DIRECTIONS:COMMON:U18PROHIBITION$\n$DIRECTIONS:COMMON:U18HELP$\n$DIRECTIONS:RECRUITERS:CONDITIONS$\n$DIRECTIONS:COMMON:RECRUITEDAWARE$\n$DIRECTIONS:COMMON:RECRUITAGREE$\n$DIRECTIONS:COMMON:RECRUITERFEAR$\n$DIRECTIONS:COMMON:SIGN$\n$DIRECTIONS:COMMON:IDDOCS$\n$DIRECTIONS:COMMON:MOVEMENT$\n$DIRECTIONS:COMMON:CONDITIONS$\n$DIRECTIONS:COMMON:LEISURE$\n$DIRECTIONS:COMMON:RESPECT$\n$DIRECTIONS:COMMON:HOTLINE$\n",
-            "C": "$DIRECTIONS:COMMON:CHECKAGE$\n$DIRECTIONS:COMMON:COPIES$\n$DIRECTIONS:COMMON:U18PROHIBITION$\n$DIRECTIONS:COMMON:U18HELP$\n$DIRECTIONS:VOLUNTARY:CONDITIONS$\n$DIRECTIONS:COMMON:RECRUITEDAWARE$\n$DIRECTIONS:COMMON:RECRUITAGREE$\n$DIRECTIONS:COMMON:RECRUITERFEAR$\n$DIRECTIONS:COMMON:SIGN$\n$DIRECTIONS:COMMON:IDDOCS$\n$DIRECTIONS:COMMON:MOVEMENT$\n$DIRECTIONS:COMMON:CONDITIONS$\n$DIRECTIONS:COMMON:LEISURE$\n$DIRECTIONS:COMMON:RESPECT$\n$DIRECTIONS:COMMON:HOTLINE$\n"
+            "1": {
+                "A": {
+                    "en": "- Check the age of pickers. Persons below 18 years are not allowed to pick cotton even if they volunteer!\n- Keep copies of ID documents of pickers\n- Instruct the farmers, brigade leaders and workers on prohibition of hiring children for cotton picking.\n\nMore information: https://telegra.ph/Test-09-01-199"
+                },
+                "B": {
+                    "en": "- Ask the recruiter to check the age of pickers and check yourself. Persons below 18 years are not allowed to pick cotton even if they volunteer!\n- Keep copies of ID documents of pickers\n- Instruct the farmers, brigade leaders and workers on prohibition of hiring children for cotton picking.\n\nMore information: https://telegra.ph/Test-09-01-199"
+                },
+                "C": {
+                    "en": "- Check the age of pickers. Persons below 18 years are not allowed to pick cotton even if they volunteer!\n- Keep copies of ID documents of pickers\n- Instruct the farmers, brigade leaders and workers on prohibition of hiring children for cotton picking.\n\nMore information: https://telegra.ph/Test-09-01-199"
+                }
+            },
+            "2": {
+                "A": {
+                    "en": "- Explain to pickers about the working conditions;\n- Ask if they agree with the conditions;\n- Ask if they are not threatened and do not fear of refusing to pick cotton;\n- Sign Labour agreements with the cotton pickers;\n- You do not have the right to withhold ID documents or other belongings of the workers;\n- Do not restrict the movement of pickers;\n- Ensure decent living and working conditions;\n- Respect the working and leisure time of pickers;\n- Treat workers with respect and dignity;\n- Inform the pickers about the hotlines on labour rights: 1176 and 1092\n\nMore information: https://telegra.ph/Test-09-01-199"
+                },
+                "B": {
+                    "en": "**This category presents the highest risks of forced labour!**\n\n- Inform the recruiters about the working conditions. Ask recruiters to convey it to pickers;\n- Check if pickers know about and agree with the conditions;\n- Ask if they are not threatened and do not fear of refusing to pick cotton;\n- Sign Labour agreements with the cotton pickers;\n- You do not have the right to withhold ID documents or other belongings of the workers;\n- Do not restrict the movement of pickers;\n- Ensure decent living and working conditions;\n- Respect the working and leisure time of pickers;\n- Treat workers with respect and dignity;\n- Inform the pickers about the hotlines on labour rights: 1176 and 1092\n\nMore information: https://telegra.ph/Test-09-01-199"
+                },
+                "C": {
+                    "en": "- Explain to pickers about the working conditions;\n- Ask if they agree with the conditions;\n- Ask if they are not threatened and do not fear of refusing to pick cotton;\n- Sign Labour agreements with the cotton pickers;\n- You do not have the right to withhold ID documents or other belongings of the workers;\n- Do not restrict the movement of pickers;\n- Ensure decent living and working conditions;\n- Respect the working and leisure time of pickers;\n- Treat workers with respect and dignity;\n- Inform the pickers about the hotlines on labour rights: 1176 and 1092\n\nMore information: https://telegra.ph/Test-09-01-199"
+                }
+
+            }
+
         },
 
         "CUSTOM": {
@@ -37,105 +70,37 @@
             "SHARE": {
                 "en": "Share",
                 "uz": "Бошкалар билан булишинг"
+            },
+            "REMOVED": {
+                "en": "Removed."
             }
         }
     },
 
     "DIRECTIONS": {
+        "CHILD": {
+            "en": "Measures to avoid child labour during the cotton harvest"
+        },
+        "ADULT": {
+            "en": "Measures to avoid forced labour during the cotton harvest"
+        },
+
+
         "YOURSELF": {
-            "MAIN": {
-                "en": "If you yourself or your staff find pickers",
-                "uz": "Ўзингиз ёки ходимларингиз пахта теримчиларини топсангиз"
-            },
-            "CONDITIONS": {
-                "en": "- Explain to potential pickers about the working conditions: wage, conditions of accommodation, food, water, transportation."
-            },
-            "RECRUITERFEAR": {
-                "en": "- Find out if potential pickers are not threatened and do not fear of refusing to pick cotton. Even if you do not threaten the pickers, they may fear to refuse, due to their or somebody else’s past negative experience. If the person works involuntarily and under fear of penalty if he/she refuses, he/she is in forced labour. <a href=\"https://example.org\"><i>click on legislation…</i></a>."
-            },
-            "IDDOCS": {
-                "en": "- Take the ID documents of pickers only to make copies or if they ask you to keep the originals of them. You do not have the right to withhold ID documents or other belongings of the workers. Instruct the brigade leader."
-            }
+            "en": "If you yourself or your staff find pickers",
+            "uz": "Ўзингиз ёки ходимларингиз пахта теримчиларини топсангиз"
         },
 
 
         "RECRUITERS": {
-            "MAIN": {
-                "en": "If you find pickers through recruiters/intermediaries",
-                "uz": "Сиз ёлловчи агентликлар / воситачилар орқали теримчиларни топган ҳолларда"
-            },
-
-            "CHECKAGE": {
-                "en": "- Ask the recruiter to check the age of pickers and check their ID documents. Check yourself. Persons below 18 years are not allowed to pick cotton even if they volunteer! <a href=\"https://example.org\"><i>click on legislation…</i></a>."
-            },
-
-            "CONDITIONS": {
-                "en": "- Provide information to recruiters about the working conditions for pickers: wages, conditions of accommodation, food, water, transportation. Ask the recruiters to convey this information to the potential pickers."
-            }
+            "en": "If you find pickers through recruiters/intermediaries",
+            "uz": "Сиз ёлловчи агентликлар / воситачилар орқали теримчиларни топган ҳолларда"
         },
 
 
         "VOLUNTARY": {
-            "MAIN": {
-                "en": "If pickers themselves and/or their brigade leader come/comes to you",
-                "uz": "Теримчиларнинг ўзлари ва / ёки уларнинг бригадири сизга мурожаат қилган ҳолларда"
-            },
-
-            "CONDITIONS": {
-                "en": "- Explain to potential pickers and brigade leaders about the working conditions: wage, conditions of accommodation, food, water, transportation. Ask the brigade leader to convey this information to the potential pickers."
-            }
-        },
-
-
-        "COMMON": {
-            "_FULL": null,
-            "COPIES": {
-                "en": "- Have on file copies of ID documents of all pickers."
-            },
-            "U18PROHIBITION": {
-                "en": "- Instruct the farmers and/or brigade leaders and workers on prohibition of using persons below 18 years in cotton picking."
-            },
-            "U18HELP": {
-                "en": "- Tell permanent members of the farm and other pickers that they are not allowed to bring with them persons below 18 years for help."
-            },
-            "RECRUITEDAWARE": {
-                "en": "- Check with recruited pickers if they are aware about the working conditions. If not, explain to them."
-            },
-            "RECRUITAGREE": {
-                "en": "- Find out if recruited pickers agree with conditions and want to pick cotton. The voluntary agreement is valid only if pickers have full and truthful information about working conditions!"
-            },
-            "SIGN": {
-                "en": "- Sign Labour agreements with the cotton pickers. <a href=\"https://example.org\"><i>Template agreement</i></a>."
-            },
-            "MOVEMENT": {
-                "en": "- Do not restrict the movement of pickers. They have the right to come to and leave the cotton field freely. Instruct the farmer and/or the brigade leader."
-            },
-            "CONDITIONS": {
-                "en": "- Ensure decent living and working conditions for the pickers."
-            },
-            "LEISURE": {
-                "en": "- Respect the working and leisure time of pickers. They are entitled to a eight hour working day for a five day working week and seven hour working day for a six day working week with a lunch break. (daily working hours should not exceed 12 hours)"
-            },
-            "RESPECT": {
-                "en": "- Treat workers with respect and dignity. Physical, psychological and verbal violence, are not acceptable. Instruct the brigade leader."
-            },
-            "HOTLINE": {
-                "en": "- Inform the pickers about the hotline of the Ministry of Employment and Labour Relations (1176) and of the Federation of Trade Unions (1092). Instruct the farmer and/or the brigade leader."
-            },
-
-
-            "_PARTIAL_NON_YOURSELF": null,
-            "RECRUITERFEAR": {
-                "en": "- Find out if recruited pickers are not threatened and do not fear of refusing to pick cotton. Even if you do not threaten the pickers, they may fear to refuse, due to their or somebody else’s past negative experience or because they fear to refuse the recruiter. If the person works involuntarily and under fear of  penalty if he/she refuses, he/she is in forced labour. <a href=\"https://example.org\"><i>click on legislation…</i></a>."
-            },
-            "IDDOCS": {
-                "en": "- Take the ID documents of pickers only to make copies or if they ask you to keep the originals of them. You do not have the right to withhold ID documents or other belongings of the workers. Instruct the farmer and/or brigade leader."
-            },
-
-            "_PARTIAL_NON_RECRUITERS": null,
-            "CHECKAGE": {
-                "en": "- Check the age of pickers. Ask their ID documents. Persons below 18 years are not allowed to pick cotton even if they volunteer! <a href=\"https://example.org\"><i>click on legislation…(pay attention)</i></a>"
-            }
+            "en": "If pickers themselves and/or their brigade leader come/comes to you",
+            "uz": "Теримчиларнинг ўзлари ва / ёки уларнинг бригадири сизга мурожаат қилган ҳолларда"
         }
     }
 }

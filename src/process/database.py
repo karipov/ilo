@@ -18,6 +18,7 @@ class User(Model):
     language = CharField(default='none')
     # find yourself / recruiters recruit / voluntary workers status
     recruit_status = CharField(default='none')
+    labor_status = CharField(default='none')
 
     fsm_state = CharField(default='0')
     requests = IntegerField(default=0)

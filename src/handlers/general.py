@@ -30,16 +30,27 @@ async def master_handler(
             "1": fsm_handler
         },
         "1": {
+            "0": fsm_handler,
             "1": fsm_handler,
-            "2": finished_setup_handler
+            "2": fsm_handler
         },
         "2": {
-            "2": finished_setup_handler,
-            "0": fsm_handler
+            "0": fsm_handler,
+            "1": fsm_handler,
+            "2": fsm_handler,
+            "3": finished_setup_handler
+        },
+        "3": {
+            "3": finished_setup_handler,
+            "2": fsm_handler
         }
     }
-
-    await tree[current_fsm][future_fsm](event, user)
+    try:
+        await tree[current_fsm][future_fsm](event, user)
+    except KeyError:
+        await event.edit(
+            REPLIES['DISPLAY']['CUSTOM']['REMOVED'][user.language]
+        )
 
 
 async def fsm_handler(
@@ -60,7 +71,8 @@ async def fsm_handler(
 
     keyboard = utility.keyboard_gen(
         future_state_data['markup'],
-        future_state_data['payload']
+        future_state_data['payload'],
+        language=user.language
     )
 
     await method(
@@ -70,7 +82,7 @@ async def fsm_handler(
             user.language
         ),
         buttons=keyboard,
-        parse_mode='HTML'
+        parse_mode='Markdown'
     )
 
     user.requests += 1
@@ -93,18 +105,16 @@ async def finished_setup_handler(
     custom_keyboard = [[
         Button.inline(
             REPLIES['DISPLAY']['CUSTOM']['BACK'][user.language],
-            '0:dummy_data'
+            '2:dummy_data'
         )
     ]]
 
     await method(
-        utility.expand_text(
-            REPLIES['DISPLAY']['MESSAGES'][user.recruit_status],
-            REPLIES,
-            user.language
-        ),
+        REPLIES['DISPLAY']['MESSAGES'][user.labor_status]
+        [user.recruit_status][user.language],
         buttons=custom_keyboard,
-        parse_mode='HTML'
+        parse_mode='Markdown',
+        link_preview=True
     )
 
     user.requests += 1
