@@ -19,11 +19,14 @@ def check_fsm(user):
 def keyboard_gen(
     labels: List[List[str]],
     data: List[List[str]],
-    kind: Button = Button.inline
+    kind: Button = Button.inline,
+    language: str = None
 ) -> List[List[Button]]:
     """
     Generates telethon-compatible keyboards
     """
+    if type(labels) == dict:  # if they have a language property
+        labels = labels[language]
     # uninitialized matrix
     button_matrix = [[None for j in range(len(i))] for i in labels]
 
