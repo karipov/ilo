@@ -5,8 +5,8 @@
                 "en": "Please choose your language:",
                 "uz": "Уз тилингизни танланг:"
             },
-            "markup": [["English"]],
-            "payload": [["1:language->en"]]
+            "markup": [["Ўзбекча"]],
+            "payload": [["1:language->uz"]]
         },
 
         "1": {
@@ -16,17 +16,20 @@
             },
 
             "markup": {
-                "en": [["« Back", "[ A ]", "[ B ]", "[ C ]"]]
+                "en": [["« Back", "[ A ]", "[ B ]", "[ C ]"]],
+                "uz": [["« Оркага", "[ A ]", "[ B ]", "[ C ]"]]
             },
             "payload": [["0:back", "2:recruit_status->A", "2:recruit_status->B", "2:recruit_status->C"]]
         },
 
         "2": {
             "text": {
-                "en": "Please choose one of the following:\n\n1. $DIRECTIONS:CHILD$\n2. $DIRECTIONS:ADULT$"
+                "en": "Please choose one of the following:\n\n1. $DIRECTIONS:CHILD$\n2. $DIRECTIONS:ADULT$",
+                "uz": "Куйидагилардан бирини танланг:\n\n1. $DIRECTIONS:CHILD$\n2. $DIRECTIONS:ADULT$"
             },
             "markup": {
-                "en": [["« Back", "[ 1 ]", "[ 2 ]"]]
+                "en": [["« Back", "[ 1 ]", "[ 2 ]"]],
+                "uz": [["« Оркага", "[ 1 ]", "[ 2 ]"]]
             },
             "payload": [["1:back", "3:labor_status->1", "3:labor_status->2"]]
         },
@@ -38,28 +41,32 @@
         "MESSAGES": {
             "1": {
                 "A": {
-                    "en": "- Check the age of pickers. Persons below 18 years are not allowed to pick cotton even if they volunteer!\n- Keep copies of ID documents of pickers\n- Instruct the farmers, brigade leaders and workers on prohibition of hiring children for cotton picking.\n\nMore information: https://telegra.ph/Test-09-01-199"
+                    "en": "- Check the age of pickers. Persons below 18 years are not allowed to pick cotton even if they volunteer!\n- Keep copies of ID documents of pickers\n- Instruct the farmers, brigade leaders and workers on prohibition of hiring children for cotton picking.\n\nMore information: https://telegra.ph/Test-09-01-199",
+                    "uz": "- Теримчиларнинг ёшини текширинг. 18 ёшдан кичик шахсларга, улар кўнгилли бўлсалар ҳам, пахта теришга рухсат берилмайди!\n- Теримчиларнинг шахсини тасдиқловчи ҳужжатларини сақланг\n- Фермерларга, бригадирларга ва ишчиларга болаларни пахта теримига ёллашни таъқиқлаш бўйича кўрсатма беринг.\n\nТўлиқ маълумот: https://telegra.ph/Pahta-terimida-bolalar-me%D2%B3natini-oldini-olish-chora-tadbirlari-09-04"
                 },
                 "B": {
-                    "en": "- Ask the recruiter to check the age of pickers and check yourself. Persons below 18 years are not allowed to pick cotton even if they volunteer!\n- Keep copies of ID documents of pickers\n- Instruct the farmers, brigade leaders and workers on prohibition of hiring children for cotton picking.\n\nMore information: https://telegra.ph/Test-09-01-199"
+                    "en": "- Ask the recruiter to check the age of pickers and check yourself. Persons below 18 years are not allowed to pick cotton even if they volunteer!\n- Keep copies of ID documents of pickers\n- Instruct the farmers, brigade leaders and workers on prohibition of hiring children for cotton picking.\n\nMore information: https://telegra.ph/Test-09-01-199",
+                    "uz": "- Ёлловчидан теримчиларнинг ёшини текширишларини сўранг. Ўзингиз ҳам текширинг. 18 ёшдан кичик шахсларга, улар кўнгилли бўлсалар ҳам, пахта теришга рухсат берилмайди!\n- Теримчиларнинг шахсини тасдиқловчи ҳужжатларини сақланг\n- Фермерларга, бригадирларга ва ишчиларга болаларни пахта теримига ёллашни таъқиқлаш бўйича кўрсатма беринг.\n\nТўлиқ маълумот: https://telegra.ph/Pahta-terimida-bolalar-me%D2%B3natini-oldini-olish-chora-tadbirlari-09-04-2"
                 },
                 "C": {
-                    "en": "- Check the age of pickers. Persons below 18 years are not allowed to pick cotton even if they volunteer!\n- Keep copies of ID documents of pickers\n- Instruct the farmers, brigade leaders and workers on prohibition of hiring children for cotton picking.\n\nMore information: https://telegra.ph/Test-09-01-199"
+                    "en": "- Check the age of pickers. Persons below 18 years are not allowed to pick cotton even if they volunteer!\n- Keep copies of ID documents of pickers\n- Instruct the farmers, brigade leaders and workers on prohibition of hiring children for cotton picking.\n\nMore information: https://telegra.ph/Test-09-01-199",
+                    "uz": "- Теримчиларнинг ёшини текширинг. 18 ёшдан кичик шахсларга, улар кўнгилли бўлсалар ҳам, пахта теришга рухсат берилмайди!\n- Теримчиларнинг шахсини тасдиқловчи ҳужжатларини сақланг\n- Фермерларга, бригадирларга ва ишчиларга болаларни пахта теримига ёллашни таъқиқлаш бўйича кўрсатма беринг.\n\nТўлиқ маълумот: https://telegra.ph/Pahta-terimida-bolalar-me%D2%B3natini-oldini-olish-chora-tadbirlari-09-04-3"
                 }
             },
             "2": {
                 "A": {
-                    "en": "- Explain to pickers about the working conditions;\n- Ask if they agree with the conditions;\n- Ask if they are not threatened and do not fear of refusing to pick cotton;\n- Sign Labour agreements with the cotton pickers;\n- You do not have the right to withhold ID documents or other belongings of the workers;\n- Do not restrict the movement of pickers;\n- Ensure decent living and working conditions;\n- Respect the working and leisure time of pickers;\n- Treat workers with respect and dignity;\n- Inform the pickers about the hotlines on labour rights: 1176 and 1092\n\nMore information: https://telegra.ph/Test-09-01-199"
+                    "en": "- Explain to pickers about the working conditions;\n- Ask if they agree with the conditions;\n- Ask if they are not threatened and do not fear of refusing to pick cotton;\n- Sign Labour agreements with the cotton pickers;\n- You do not have the right to withhold ID documents or other belongings of the workers;\n- Do not restrict the movement of pickers;\n- Ensure decent living and working conditions;\n- Respect the working and leisure time of pickers;\n- Treat workers with respect and dignity;\n- Inform the pickers about the hotlines on labour rights: 1176 and 1092\n\nMore information: https://telegra.ph/Test-09-01-199",
+                    "uz": "- Теримчиларга меҳнат шарт - шароитиларини тушунтиринг;\n- Улар ушбу шартларга рози эканликларини текширинг;\n- Теримчиларга таҳдид қилинмаётганини ва пахта теришдан бош тортишдан қўрқмасликларини аниқланг;\n- Пахта терувчилар билан меҳнат шартномаларини имзоланг;\n- Ишчиларнинг шахсини тасдиқловчи ҳужжатларини ёки уларга тегишли бўлган бошқа нарсаларни олиб қўйишга ҳаққингиз йўқ;\n- Пахта теримчиларининг ҳаракат эркинлигини чекламанг;\n- Теримчиларни муносиб яшаш ва иш шароитлари билан таъминланг;\n- Теримчиларнинг иш ва ҳордиқ чиқариш вақтларини ҳурмат қилинг;\n- Ишчиларга ҳурмат ва эҳтиром билан муносабатда бўлинг;\n- Теримчиларга меҳнат ҳуқуқлари масалалари  ишонч телефонлари тўғрисида маълумот беринг: 1176 ва 1092;\n\nТўлиқ маълумот: https://telegra.ph/Pahta-terimida-mazhburij-me%D2%B3natni-oldini-olish-chora-tadbirlari-09-04"
                 },
                 "B": {
-                    "en": "**This category presents the highest risks of forced labour!**\n\n- Inform the recruiters about the working conditions. Ask recruiters to convey it to pickers;\n- Check if pickers know about and agree with the conditions;\n- Ask if they are not threatened and do not fear of refusing to pick cotton;\n- Sign Labour agreements with the cotton pickers;\n- You do not have the right to withhold ID documents or other belongings of the workers;\n- Do not restrict the movement of pickers;\n- Ensure decent living and working conditions;\n- Respect the working and leisure time of pickers;\n- Treat workers with respect and dignity;\n- Inform the pickers about the hotlines on labour rights: 1176 and 1092\n\nMore information: https://telegra.ph/Test-09-01-199"
+                    "en": "**This category presents the highest risks of forced labour!**\n\n- Inform the recruiters about the working conditions. Ask recruiters to convey it to pickers;\n- Check if pickers know about and agree with the conditions;\n- Ask if they are not threatened and do not fear of refusing to pick cotton;\n- Sign Labour agreements with the cotton pickers;\n- You do not have the right to withhold ID documents or other belongings of the workers;\n- Do not restrict the movement of pickers;\n- Ensure decent living and working conditions;\n- Respect the working and leisure time of pickers;\n- Treat workers with respect and dignity;\n- Inform the pickers about the hotlines on labour rights: 1176 and 1092\n\nMore information: https://telegra.ph/Test-09-01-199",
+                    "uz": "**Ушбу тоифада мажбурий меҳнатнинг энг юқори хатарлари кузатилади!**\n\n- Ёлловчиларга меҳнат шарт - шароитиларини тушунтиринг. Ёлловчилардан буни теримчиларга етказишларини сўранг;\n- Теримчилар ушбу шартларга билишларини ва ушбу шартларга рози эканликларини текширинг;\n- Уларга таҳдид қилинмаётганини ва пахта теришдан бош тортишдан қўрқмасликларини аниқланг;\n- Пахта терувчилар билан меҳнат шартномаларини имзоланг;\n- Ишчиларнинг шахсини тасдиқловчи ҳужжатларини ёки уларга тегишли бўлган бошқа нарсаларни олиб қўйишга ҳаққингиз йўқ;\n- Пахта теримчиларининг ҳаракат эркинлигини чекламанг;\n- Теримчиларни муносиб яшаш ва иш шароитлари билан таъминланг;\n- Теримчиларнинг иш ва ҳордиқ чиқариш вақтларини ҳурмат қилинг;\n- Ишчиларга ҳурмат ва эҳтиром билан муносабатда бўлинг;\n- Теримчиларга меҳнат ҳуқуқлари масалалари  ишонч телефонлари тўғрисида маълумот беринг: 1176 ва 1092;\n\nТўлиқ маълумот: https://telegra.ph/Pahta-terimida-mazhburij-me%D2%B3natni-oldini-olish-chora-tadbirlari-09-06"
                 },
                 "C": {
-                    "en": "- Explain to pickers about the working conditions;\n- Ask if they agree with the conditions;\n- Ask if they are not threatened and do not fear of refusing to pick cotton;\n- Sign Labour agreements with the cotton pickers;\n- You do not have the right to withhold ID documents or other belongings of the workers;\n- Do not restrict the movement of pickers;\n- Ensure decent living and working conditions;\n- Respect the working and leisure time of pickers;\n- Treat workers with respect and dignity;\n- Inform the pickers about the hotlines on labour rights: 1176 and 1092\n\nMore information: https://telegra.ph/Test-09-01-199"
+                    "en": "- Explain to pickers about the working conditions;\n- Ask if they agree with the conditions;\n- Ask if they are not threatened and do not fear of refusing to pick cotton;\n- Sign Labour agreements with the cotton pickers;\n- You do not have the right to withhold ID documents or other belongings of the workers;\n- Do not restrict the movement of pickers;\n- Ensure decent living and working conditions;\n- Respect the working and leisure time of pickers;\n- Treat workers with respect and dignity;\n- Inform the pickers about the hotlines on labour rights: 1176 and 1092\n\nMore information: https://telegra.ph/Test-09-01-199",
+                    "uz": "- Теримчиларга меҳнат шарт - шароитиларини тушунтиринг;\n- Улар ушбу шартларга рози эканликларини текширинг;\n- Теримчиларга таҳдид қилинмаётганини ва пахта теришдан бош тортишдан қўрқмасликларини аниқланг;\n- Пахта терувчилар билан меҳнат шартномаларини имзоланг;\n- Ишчиларнинг шахсини тасдиқловчи ҳужжатларини ёки уларга тегишли бўлган бошқа нарсаларни олиб қўйишга ҳаққингиз йўқ;\n- Пахта теримчиларининг ҳаракат эркинлигини чекламанг;\n- Теримчиларни муносиб яшаш ва иш шароитлари билан таъминланг;\n- Теримчиларнинг иш ва ҳордиқ чиқариш вақтларини ҳурмат қилинг;\n- Ишчиларга ҳурмат ва эҳтиром билан муносабатда бўлинг;\n- Теримчиларга меҳнат ҳуқуқлари масалалари  ишонч телефонлари тўғрисида маълумот беринг: 1176 ва 1092;\n\nТўлиқ маълумот: https://telegra.ph/Pahta-terimida-mazhburij-me%D2%B3natni-oldini-olish-chora-tadbirlari-09-06-2"
                 }
-
             }
-
         },
 
         "CUSTOM": {
@@ -72,17 +79,20 @@
                 "uz": "Бошкалар билан булишинг"
             },
             "REMOVED": {
-                "en": "Removed."
+                "en": "Removed.",
+                "uz": "Олиб ташланди."
             }
         }
     },
 
     "DIRECTIONS": {
         "CHILD": {
-            "en": "Measures to avoid child labour during the cotton harvest"
+            "en": "Measures to avoid child labour during the cotton harvest",
+            "uz": "Пахта теримида болалар меҳнатини олдини олиш чора тадбирлари"
         },
         "ADULT": {
-            "en": "Measures to avoid forced labour during the cotton harvest"
+            "en": "Measures to avoid forced labour during the cotton harvest",
+            "uz": "Пахта теримида мажбурий меҳнатни олдини олиш чора тадбирлари"
         },
 
 
