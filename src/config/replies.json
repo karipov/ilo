@@ -2,27 +2,18 @@
     "FSM": {
         "0": {
             "text": {
-                "en": "Please choose your language:",
-                "uz": "Уз тилингизни танланг:"
-            },
-            "markup": [["Ўзбекча"]],
-            "payload": [["1:language->uz"]]
-        },
-
-        "1": {
-            "text": {
                 "en": "Please choose one of the following:\n\nA. $DIRECTIONS:YOURSELF$\nB. $DIRECTIONS:RECRUITERS$\nC. $DIRECTIONS:VOLUNTARY$",
                 "uz": "Куйидагилардан бирини танланг:\n\nA. $DIRECTIONS:YOURSELF$\nB. $DIRECTIONS:RECRUITERS$\nC. $DIRECTIONS:VOLUNTARY$"
             },
 
             "markup": {
-                "en": [["« Back", "[ A ]", "[ B ]", "[ C ]"]],
-                "uz": [["« Оркага", "[ A ]", "[ B ]", "[ C ]"]]
+                "en": [["[ A ]", "[ B ]", "[ C ]"]],
+                "uz": [["[ A ]", "[ B ]", "[ C ]"]]
             },
-            "payload": [["0:back", "2:recruit_status->A", "2:recruit_status->B", "2:recruit_status->C"]]
+            "payload": [["1:recruit_status->A", "1:recruit_status->B", "1:recruit_status->C"]]
         },
 
-        "2": {
+        "1": {
             "text": {
                 "en": "Please choose one of the following:\n\n1. $DIRECTIONS:CHILD$\n2. $DIRECTIONS:ADULT$",
                 "uz": "Куйидагилардан бирини танланг:\n\n1. $DIRECTIONS:CHILD$\n2. $DIRECTIONS:ADULT$"
@@ -31,10 +22,10 @@
                 "en": [["« Back", "[ 1 ]", "[ 2 ]"]],
                 "uz": [["« Оркага", "[ 1 ]", "[ 2 ]"]]
             },
-            "payload": [["1:back", "3:labor_status->1", "3:labor_status->2"]]
+            "payload": [["0:back", "2:labor_status->1", "2:labor_status->2"]]
         },
 
-        "3": ""
+        "2": ""
     },
 
     "DISPLAY": {

@@ -32,17 +32,12 @@ async def master_handler(
         "1": {
             "0": fsm_handler,
             "1": fsm_handler,
-            "2": fsm_handler
+            "2": finished_setup_handler
         },
         "2": {
             "0": fsm_handler,
             "1": fsm_handler,
-            "2": fsm_handler,
-            "3": finished_setup_handler
-        },
-        "3": {
-            "3": finished_setup_handler,
-            "2": fsm_handler
+            "2": finished_setup_handler
         }
     }
     try:
@@ -105,7 +100,7 @@ async def finished_setup_handler(
     custom_keyboard = [[
         Button.inline(
             REPLIES['DISPLAY']['CUSTOM']['BACK'][user.language],
-            '2:dummy_data'
+            '1:dummy_data'
         )
     ]]
 

@@ -15,7 +15,7 @@ db = SqliteDatabase(Path.cwd().joinpath(CONFIG['LOG']['DB']))
 
 class User(Model):
     user_id = IntegerField(primary_key=True)
-    language = CharField(default='none')
+    language = CharField(default='uz')
     # find yourself / recruiters recruit / voluntary workers status
     recruit_status = CharField(default='none')
     labor_status = CharField(default='none')
@@ -53,7 +53,7 @@ def user_decorator(increment: bool = True):
         async def func_wrapper(event, *args, **kwargs):
             user, _ = User.get_or_create(
                 user_id=event.chat_id,
-                defaults={'language': 'en'}
+                defaults={'language': 'uz'}
             )
 
             await func(event, user, *args, **kwargs)
